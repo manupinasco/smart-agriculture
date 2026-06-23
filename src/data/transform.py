@@ -17,7 +17,7 @@ DICT_MAPEAR = {
 VARS_CLIMATICAS = ['temp_acum_1m', 'pres_prom_1m', 'viento_prom_1m', 'hum_prom_1m']
 ESTADOS_COLS = ['Estado General MB', 'Estado General B', 'Estado General R', 'Estado General M']
 
-def run_transformation(df_input=None,test=False):
+def run_transformation(df_input=None):
     if df_input is not None:
         df=df_input.copy()
     else:
@@ -66,11 +66,9 @@ def run_transformation(df_input=None,test=False):
 
     df[ESTADOS_COLS] = df[ESTADOS_COLS].apply(pd.to_numeric, errors='coerce').fillna(0)
 
-    # Save checkpoint if it's not test
-    if not test:
-        df.to_parquet(OUTPUT_PATH, index=False)
-        print(f"Success. Cleaned data saved to {OUTPUT_PATH}. Sample:")
-        print(df.head())
+    df.to_parquet(OUTPUT_PATH, index=False)
+    print(f"Success. Cleaned data saved to {OUTPUT_PATH}. Sample:")
+    print(df.head())
     
     return df
 

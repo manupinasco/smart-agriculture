@@ -1,0 +1,10 @@
+meteostat
+tabula-py
+seaborn
+matplotlib
+numpy
+pandas
+scikit-learn
+jpype1
+pyarrow
+pytest

@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Dataset
+data/raw/smart-agriculture.csv
+
 # Distribution / packaging
 .Python
 build/

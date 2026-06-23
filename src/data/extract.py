@@ -35,7 +35,7 @@ def extract_tables_with_tabula(pdf_path):
         print("Warning: No tables found in this file.")
     return df_list
 
-def process_raw_agricultural_table(df_untidy,test=False):
+def process_raw_agricultural_table(df_untidy):
     """ Cleans messy Tabula structures into a neat tidy DataFrame """
     # 1. Spot the crop name (usually hidden in first headers)
     crop = "UNKNOWN"
