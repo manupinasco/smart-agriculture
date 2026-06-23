@@ -1,4 +1,4 @@
-# Crop Health Detection Based on Weather Info
+# Crop Health Prediction based on Weather Information
 This project was completed as part of the "Introduction to Machine Learning" course in the [Bachelor's Degree in Data Science](https://www.unsam.edu.ar/escuelas/ecyt/661/ciencia/ciencia-de-datos) at the [University of San Martín (UNSAM)](https://www.unsam.edu.ar/).
 
 ## Project Intro/Objective
@@ -22,13 +22,15 @@ Este trabajo tiene como objetivo optimizar la toma de decisiones de los actores 
 ## Getting Started
 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data comes from [meteostat API](https://meteostat.net/es/) and [SAGyP weekly reports](https://www.magyp.gob.ar/sitio/areas/estimaciones/estimaciones/informes/). Those reportes are kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/external) within this repo. Parsed raw data combined with meteostat weather info is kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/raw).
+2. Raw Data comes from [meteostat API](https://meteostat.net/es/) and [SAGyP weekly reports](https://www.magyp.gob.ar/sitio/areas/estimaciones/estimaciones/informes/). Those reportes are kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/external), within this repo. Parsed raw data combined with meteostat weather info is kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/raw).
 3. Data processing/transformation scripts are being kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/src/data).
 4. Feature engineering script is kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/src/features).
 5. Model training/evaluation/prediction scripts are being kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/src/models).
 
-## Contributing Members
+## Team Members
 
-**Team Members (Contacts): [Emanuel Pinasco](https://github.com/manupinasco)(pinascoemanuel@gmail.com), [Ignacio Miguel García](https://github.com/manupinasco)(chonamiguelgarcia@gmail.com)**
+* [Emanuel Pinasco](https://github.com/manupinasco)(pinascoemanuel@gmail.com)
+
+* [Ignacio Miguel García](https://github.com/manupinasco)(chonamiguelgarcia@gmail.com)**
 
 * Feel free to contact team members with any questions or if you are interested in contributing!
