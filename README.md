@@ -31,6 +31,8 @@ This project implements ETL and machine learning pipelines to predict wheat crop
 
 Missing weekly observations were recovered by web scraping official weekly reports. To avoid temporal data leakage, the modeling strategy combined time-series cross-validation, a final-campaign holdout set, and predictions limited to a one-month forecasting horizon. Since the primary objective was to detect poor crop conditions, model selection prioritized maximizing recall and F1-score for the positive (bad crop) class.
 
+For more information, read the presentation of the project [here](https://github.com/manupinasco/smart-agriculture/tree/main/reports).
+
 ## Getting Started
 
 1. Clone this repo (for help, see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
