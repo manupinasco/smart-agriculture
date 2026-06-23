@@ -22,10 +22,14 @@ Este trabajo tiene como objetivo optimizar la toma de decisiones de los actores 
 ## Getting Started
 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data comes from [meteostat API](https://meteostat.net/es/) and [SAGyP weekly reports](https://www.magyp.gob.ar/sitio/areas/estimaciones/estimaciones/informes/). Those reportes are kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/external), within this repo. Parsed raw data combined with meteostat weather info is kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/raw).
-3. Data processing/transformation scripts are being kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/src/data).
-4. Feature engineering script is kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/src/features).
-5. Model training/evaluation/prediction scripts are being kept [here](https://github.com/manupinasco/smart-agriculture/tree/main/src/models).
+* Comment: Raw data comes from [meteostat API](https://meteostat.net/es/) and [SAGyP weekly reports](https://www.magyp.gob.ar/sitio/areas/estimaciones/estimaciones/informes/). Those reportes are [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/external), within this repo. Parsed raw data combined with meteostat weather info is [here](https://github.com/manupinasco/smart-agriculture/tree/main/data/raw).
+2. Process & transform data using [these scripts](https://github.com/manupinasco/smart-agriculture/tree/main/src/data).
+4. Run the feature engineering pipeline using [this script](https://github.com/manupinasco/smart-agriculture/tree/main/src/features).
+5. Train and evaluate the models (or use them for prediction) with [these scripts](https://github.com/manupinasco/smart-agriculture/tree/main/src/models).
+* Comment: run the scripts like this:
+```bash
+python -m src.data.extract
+```
 
 ## Team Members
 
