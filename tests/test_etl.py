@@ -4,8 +4,11 @@ import numpy as np
 from datetime import datetime
 from src.data.extract import process_raw_agricultural_table
 from src.data.transform import run_transformation
+from unittest.mock import patch
 
-def test_extract_and_tidy_happy_path():
+
+@patch("pandas.DataFrame.to_parquet")
+def test_extract_and_tidy_happy_path(mock_to_parquet):
     """
     Tests that the main parser correctly extracts data when the format is right.
     We mock a typical messy dataframe.
@@ -19,7 +22,7 @@ def test_extract_and_tidy_happy_path():
     df_raw_mock = pd.DataFrame(mock_data)
     df_raw_mock.loc[0, "Unnamed: 1"] = "Humedad"
     # Run the transformation logic on the extracted mock
-    result_df = process_raw_agricultural_table(df_raw_mock, test=True)
+    result_df = process_raw_agricultural_table(df_raw_mock)
 
     # Asserts to make sure it's not empty and shapes the data correctly
     assert result_df is not None, "The parser returned None for a valid mock table"
@@ -28,7 +31,8 @@ def test_extract_and_tidy_happy_path():
     assert result_df.iloc[0]["CULTIVO"] == "SOJA"
     assert result_df.iloc[0]["PROVINCIA"] == "BUENOS AIRES"
 
-def test_transform_logic_with_mock():
+@patch("pandas.DataFrame.to_parquet")
+def test_transform_logic_with_mock(mock_to_parquet):
     """
     Tests campaign generation, 1-month rolling weather grouping, 
     and dictionary fallback mapping by executing the real script function.
@@ -49,7 +53,7 @@ def test_transform_logic_with_mock():
     df_input = pd.DataFrame(mock_extract_data)
 
     # Execute actual transformation function passing the custom mock
-    df_result = run_transformation(df_input=df_input,test=True)
+    df_result = run_transformation(df_input=df_input)
 
     # --- ASSERTIONS FOR TRANSFORM ---
     assert "TRIGO" in df_result['CULTIVO'].unique()
