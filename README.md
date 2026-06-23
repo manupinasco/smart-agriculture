@@ -29,8 +29,8 @@ Este trabajo tiene como objetivo optimizar la toma de decisiones de los actores 
 
 ## Team Members
 
-* [Emanuel Pinasco](https://github.com/manupinasco)(pinascoemanuel@gmail.com)
+* [Emanuel Pinasco](https://github.com/manupinasco) (pinascoemanuel@gmail.com)
 
-* [Ignacio Miguel García](https://github.com/manupinasco)(chonamiguelgarcia@gmail.com)**
+* [Ignacio Miguel García](https://github.com/manupinasco) (chonamiguelgarcia@gmail.com)
 
 * Feel free to contact team members with any questions or if you are interested in contributing!
